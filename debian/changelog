@@ -1,3 +1,16 @@
+gooroom-initial-setup (0.1.1+grm3u1) unstable; urgency=medium
+
+  [ cjheo ]
+  * [a37df782] 보안문제로 gis-adduser-helper 삭제 (syslog에 명령어 로그가 남음) 기타 사소한 버그처리
+
+  [ boyeon.choi ]
+  * [1d3fbf19] Gooroom3.0 initialization for Beta1
+  * [48ceeea0] Gooroom3.0 Initialization for Beta2
+  * [36bba58c] Removed gnome-panel
+  * [94f7b8ee] Modified gtk_window to gtk_application_window
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Sat, 04 Dec 2021 19:09:36 +0900
+
 gooroom-initial-setup (0.1.0) unstable; urgency=low
 
   * Initial release.
