@@ -82,7 +82,7 @@ init_config_files (void)
 
 	homedir = g_get_home_dir ();
 
-	for (i = 0; i < 3; i++) {
+	for (i = 0; i < 4; i++) {
 		path = g_build_filename (homedir, remove_paths[i], NULL);
 		g_remove (path);
 		g_free (path);
