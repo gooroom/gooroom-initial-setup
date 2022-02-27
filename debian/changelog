@@ -1,3 +1,11 @@
+gooroom-initial-setup (0.2.1+grm3u1) unstable; urgency=medium
+
+  [ boyeon.choi ]
+  * [1cbd0a52] Deleted keyrings directory for gnome-keyring
+  * [fffaa589] Deleted user's home direcotory
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Sun, 27 Feb 2022 16:23:17 +0900
+
 gooroom-initial-setup (0.1.1+grm3u1) unstable; urgency=medium
 
   [ cjheo ]
