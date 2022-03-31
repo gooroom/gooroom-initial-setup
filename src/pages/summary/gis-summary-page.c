@@ -188,7 +188,6 @@ system_logout_cb (gpointer user_data)
                                      title, message);
 	gtk_dialog_add_buttons (GTK_DIALOG (dialog),
 							_("_Ok"), GTK_RESPONSE_OK,
-							_("_Cancel"), GTK_RESPONSE_CANCEL,
 							NULL);
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
 
@@ -261,8 +260,6 @@ show_splash_window (GisSummaryPage *page)
 
 	priv->splash = splash_window_new (GTK_WINDOW (toplevel));
 	splash_window_set_message_label (SPLASH_WINDOW (priv->splash), message);
-
-	splash_window_show (priv->splash);
 }
 
 static char *
@@ -546,6 +543,31 @@ password_changed_done_cb (PasswdHandler *handler,
 }
 
 static void
+add_user_group (GisSummaryPage *page)
+{
+	guint i = 0;
+	gchar *cmd = NULL;
+	gchar *username = NULL, *realname = NULL;
+	GisSummaryPagePrivate *priv = page->priv;
+	GisPageManager *manager = GIS_PAGE (page)->manager;
+
+	static char *modes[] = { "adm", "audio", "bluetooth", "cdrom", "dialout",
+				 "dip", "fax", "floppy", "lpadmin", "netdev", "plugdev",
+				 "scanner", "sudo", "tape", "users",  "video", NULL };
+
+	gis_page_manager_get_user_info (manager, &realname, &username, NULL);
+
+	for (i = 0; modes[i] != NULL; i++) {
+		cmd = g_strdup_printf ("/usr/bin/pkexec /usr/sbin/usermod -aG %s %s",modes[i], username);
+
+		if (!g_spawn_command_line_sync (cmd, NULL, NULL, NULL, NULL)){
+			g_warning ("Faild to register %s with group [ #%d: %s ]\n", username, i, modes[i]);
+		}
+	}
+	g_free (cmd);
+}
+
+static void
 adduser_done_cb (GPid pid, gint status, gpointer user_data)
 {
 	PasswdHandler  *passwd_handler = NULL;
@@ -564,6 +586,8 @@ adduser_done_cb (GPid pid, gint status, gpointer user_data)
 		passwd_handler = passwd_init ();
 		passwd_change_password (passwd_handler, username, password,
 				(PasswdCallback) password_changed_done_cb, page);
+
+		g_timeout_add (3000, (GSourceFunc)add_user_group, page);
 	} else {
 		const gchar *message, *title;
 
@@ -602,18 +626,14 @@ static void
 gis_summary_page_save_data (GisPage *page)
 {
 	GPid pid;
-	guint i = 0;
 	gchar **argv;
 	const char *cmd_prefix;
 	gchar *cmd = NULL, *realname = NULL, *username = NULL;
 	GisSummaryPage *self = GIS_SUMMARY_PAGE (page);
 	GisSummaryPagePrivate *priv = self->priv;
 	GisPageManager *manager = page->manager;
-	static char *modes[] = { "adm", "audio", "bluetooth", "cdrom", "dialout",
-							 "dip", "fax", "floppy", "lpadmin", "netdev", "plugdev",
-							 "scanner", "sudo", "tape", "users",  "video", NULL };
 
-	show_splash_window (self);
+	splash_window_show (priv->splash);
 
 	gis_page_manager_get_user_info (manager, &realname, &username, NULL);
 
@@ -636,11 +656,6 @@ gis_summary_page_save_data (GisPage *page)
 
 	if (g_spawn_async (NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD, NULL, NULL, &pid, NULL)) {
 		g_child_watch_add (pid, (GChildWatchFunc) adduser_done_cb, self);
-	}
-
-	for (i = 0; modes[i] != NULL; i++) {
-		cmd = g_strdup_printf ("/usr/bin/pkexec /usr/sbin/usermod -aG %s %s",modes[i], username);
-		g_spawn_command_line_sync (cmd, NULL, NULL, NULL, NULL);
 	}
 
 	g_free (cmd);
@@ -708,6 +723,8 @@ gis_summary_page_init (GisSummaryPage *page)
 	gtk_widget_init_template (GTK_WIDGET (page));
 
 	gis_page_set_title (GIS_PAGE (page), _("Setup Complete"));
+
+	show_splash_window (page);
 }
 
 static void
