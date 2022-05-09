@@ -416,33 +416,33 @@ msgstr "기타 네트워크…"
 
 #: ../src/pages/network/gis-network-page.c:444
 msgid "Wireless - No Use"
-msgstr "무선네트워크 - 사용안함"
+msgstr "무선 네트워크 - 사용 안함"
 
 #: ../src/pages/network/gis-network-page.c:450
 msgid "Wireless - Use"
-msgstr "무선네트워크 - 사용"
+msgstr "무선 네트워크 - 사용"
 
 #: ../src/pages/network/gis-network-page.c:651
 msgid "Wired - No Use"
-msgstr "유선네트워크 - 사용안함"
+msgstr "유선 네트워크 - 사용 안함"
 
 #: ../src/pages/network/gis-network-page.c:653
 msgid "Wired - Disconnected"
-msgstr "유선네트워크 - 연결안됨"
+msgstr "유선 네트워크 - 연결 안됨"
 
 #: ../src/pages/network/gis-network-page.c:659
 msgid "Wired - Connected"
-msgstr "유선네트워크 - 연결됨"
+msgstr "유선 네트워크 - 연결됨"
 
 #: ../src/pages/network/gis-network-page.c:709
 #: ../src/pages/network/gis-network-page.c:1148
 msgid "Wired - No Device"
-msgstr "유선네트워크 - 장치없음"
+msgstr "유선 네트워크 - 장치 없음"
 
 #: ../src/pages/network/gis-network-page.c:712
 #: ../src/pages/network/gis-network-page.c:1157
 msgid "Wireless - No Device"
-msgstr "무선네트워크 - 장치없음"
+msgstr "무선 네트워크 - 장치 없음"
 
 #: ../src/pages/network/gis-network-page.c:1136
 #: ../src/pages/network/gis-network-page.c:1246
