@@ -179,23 +179,23 @@ system_logout_cb (gpointer user_data)
 
 	hide_splash_window (self);
 
-    title = _("Done setting");
-	message = _("All settings have been completed. Do you want to logout?");
+	title = _("Done setting");
+	message = _("All settings have been completed. Do you want to reboot?");
 	toplevel = gtk_widget_get_toplevel (GTK_WIDGET (self));
 
 	dialog = gis_message_dialog_new (GTK_WINDOW (toplevel),
                                      "dialog-warning-symbolic.symbolic",
                                      title, message);
 	gtk_dialog_add_buttons (GTK_DIALOG (dialog),
-							_("_Ok"), GTK_RESPONSE_OK,
-							NULL);
+				_("_Ok"), GTK_RESPONSE_OK,
+				NULL);
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
 
 	res = gtk_dialog_run (GTK_DIALOG (dialog));
 	gtk_widget_destroy (dialog);
 
 	if (res == GTK_RESPONSE_OK) {
-		cmd = "/usr/bin/gooroom-logout-command --logout --delay=100";
+		cmd = "/usr/bin/gooroom-logout-command --reboot --delay=100";
 		g_shell_parse_argv (cmd, NULL, &argv, NULL);
 		g_spawn_async (NULL, argv, NULL, G_SPAWN_SEARCH_PATH, NULL, NULL, NULL, NULL);
 	}

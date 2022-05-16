@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gooroom-initial-setup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-25 14:37+0900\n"
+"POT-Creation-Date: 2022-05-16 18:55+0900\n"
 "PO-Revision-Date: 2019-09-04 17:37-0400\n"
 "Last-Translator: Gooroom <gooroom@gooroom.kr>\n"
 "Language-Team: Gooroom <gooroom@gooroom.kr>\n"
@@ -189,14 +189,14 @@ msgid ""
 msgstr ""
 
 #: ../src/pages/account/gis-account-page.c:327
-#: ../src/pages/summary/gis-summary-page.c:669
+#: ../src/pages/summary/gis-summary-page.c:709
 #: ../src/pages/account/gis-account-page.ui.h:2
 #: ../src/pages/summary/gis-summary-page.ui.h:3
 msgid "User Name"
 msgstr ""
 
 #: ../src/pages/account/gis-account-page.c:328
-#: ../src/pages/summary/gis-summary-page.c:670
+#: ../src/pages/summary/gis-summary-page.c:710
 #: ../src/pages/account/gis-account-page.ui.h:3
 #: ../src/pages/summary/gis-summary-page.ui.h:4
 msgid "Real Name"
@@ -231,99 +231,98 @@ msgid ""
 "time from the Settings application."
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:157
+#: ../src/pages/summary/gis-summary-page.c:182
 msgid "Done setting"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:158
-msgid "All settings have been completed. Do you want to logout?"
+#: ../src/pages/summary/gis-summary-page.c:183
+msgid "All settings have been completed. Do you want to reboot?"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:165
-#: ../src/pages/summary/gis-summary-page.c:210
+#: ../src/pages/summary/gis-summary-page.c:190
+#: ../src/pages/summary/gis-summary-page.c:234
 msgid "_Ok"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:166
-#: ../src/pages/summary/gis-summary-page.c:211
+#: ../src/pages/summary/gis-summary-page.c:235
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:235
+#: ../src/pages/summary/gis-summary-page.c:259
 msgid ""
 "Configuring user's environment\n"
 "Please wait..."
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:303
+#: ../src/pages/summary/gis-summary-page.c:325
 msgid "No Use"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:351
+#: ../src/pages/summary/gis-summary-page.c:373
 msgid "Unknown"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:414
+#: ../src/pages/summary/gis-summary-page.c:436
 msgid ""
 "User's environment configuration is completed.\n"
 "Restart the system after a while..."
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:464
+#: ../src/pages/summary/gis-summary-page.c:486
 msgid "User Environment Configuration Error"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:465
+#: ../src/pages/summary/gis-summary-page.c:487
 msgid ""
 "Failed to configure user's environment. Do you want to try again after "
 "rebooting the system?"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:516
+#: ../src/pages/summary/gis-summary-page.c:538
 msgid "Password Setting Error"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:517
+#: ../src/pages/summary/gis-summary-page.c:539
 msgid ""
 "Failed to set password. Do you want to try again after rebooting the system?"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:545
+#: ../src/pages/summary/gis-summary-page.c:594
 msgid "Account Creating Error"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:546
+#: ../src/pages/summary/gis-summary-page.c:595
 msgid ""
 "Failed to create an account. Do you want to try again after rebooting the "
 "system?"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:663
-#: ../src/pages/summary/gis-summary-page.c:685
+#: ../src/pages/summary/gis-summary-page.c:703
+#: ../src/pages/summary/gis-summary-page.c:725
 msgid "Setup Complete"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:665
+#: ../src/pages/summary/gis-summary-page.c:705
 #: ../src/pages/summary/gis-summary-page.ui.h:1
 msgid "Setup is complete"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:666
+#: ../src/pages/summary/gis-summary-page.c:706
 #: ../src/pages/summary/gis-summary-page.ui.h:2
 msgid "OS"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:667
+#: ../src/pages/summary/gis-summary-page.c:707
 #: ../src/pages/summary/gis-summary-page.ui.h:6
 msgid "Hostname"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:668
+#: ../src/pages/summary/gis-summary-page.c:708
 #: ../src/pages/summary/gis-summary-page.ui.h:5
 msgid "Language"
 msgstr ""
 
-#: ../src/pages/summary/gis-summary-page.c:671
+#: ../src/pages/summary/gis-summary-page.c:711
 #: ../src/pages/summary/gis-summary-page.ui.h:7
 msgid "Online Accounts"
 msgstr ""
