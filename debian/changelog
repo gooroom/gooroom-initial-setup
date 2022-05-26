@@ -1,3 +1,11 @@
+gooroom-initial-setup (0.3.1+grm3u1) unstable; urgency=medium
+
+  [ boyeon.choi ]
+  * [70e3fffa] [Bug: 4248] Corrected the text issue: 유선 네트워크, 무선 네트워크, 안결 안함
+  * [d612b18e] [Bug: 4248/4397] Fixed some typos
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Thu, 26 May 2022 18:15:48 +0900
+
 gooroom-initial-setup (0.2.2+grm3u1) unstable; urgency=medium
 
   [ boyeon.choi ]
