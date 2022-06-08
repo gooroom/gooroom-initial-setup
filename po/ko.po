@@ -249,7 +249,9 @@ msgstr "설정 완료"
 
 #: ../src/pages/summary/gis-summary-page.c:183
 msgid "All settings have been completed. Do you want to reboot?"
-msgstr "모든 설정이 완료되었습니다. 재시작 하시겠습니까?"
+msgstr ""
+"모든 설정이 완료되었습니다.\n"
+"재시작 하시겠습니까?"
 
 #: ../src/pages/summary/gis-summary-page.c:190
 #: ../src/pages/summary/gis-summary-page.c:234
