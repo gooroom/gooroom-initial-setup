@@ -1,3 +1,10 @@
+gooroom-initial-setup (0.3.2+grm3u1) unstable; urgency=medium
+
+  [ boyeon.choi ]
+  * [7686dd09] Organized the spacing for readability
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Mon, 20 Jun 2022 08:44:56 +0900
+
 gooroom-initial-setup (0.3.1+grm3u1) unstable; urgency=medium
 
   [ boyeon.choi ]
