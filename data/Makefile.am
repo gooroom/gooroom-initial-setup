@@ -10,4 +10,4 @@ libexec_SCRIPTS = \
 
 lightdm_confdir = $(sysconfdir)/lightdm/lightdm.conf.d
 lightdm_conf_DATA = \
-	90_gooroom-initial-setup.conf
+	95_gooroom-initial-setup.conf

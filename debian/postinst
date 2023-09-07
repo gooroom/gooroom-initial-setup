@@ -2,9 +2,9 @@
 
 set -eu
 
-# creating gooroom-initial-setup user if it isn't already there
-if ! getent passwd gooroom-initial-setup >/dev/null; then
-        adduser --system --force-badname --quiet \
+# creating gis user if it isn't already there
+if ! getent passwd gis >/dev/null; then
+        adduser --system --allow-bad-names --quiet \
             --home /var/tmp/gis --shell /bin/bash gis
         adduser gis netdev
 fi

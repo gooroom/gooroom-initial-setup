@@ -1,3 +1,3 @@
 #!/bin/sh
 
-/bin/rm /etc/lightdm/lightdm.conf.d/90_gooroom-initial-setup.conf
+/bin/rm /etc/lightdm/lightdm.conf.d/95_gooroom-initial-setup.conf

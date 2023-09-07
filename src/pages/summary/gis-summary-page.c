@@ -81,6 +81,20 @@ hide_splash_window (GisSummaryPage *page)
 	}
 }
 
+static void
+show_splash_window (GisSummaryPage *page, const gchar *message)
+{
+	GisSummaryPagePrivate *priv = page->priv;
+
+	if (!priv->splash) {
+		GtkWidget *toplevel = gtk_widget_get_toplevel (GTK_WIDGET (page));
+		priv->splash = splash_window_new (GTK_WINDOW (toplevel));
+	}
+
+	splash_window_set_message_label (SPLASH_WINDOW (priv->splash), message);
+	splash_window_show (priv->splash);
+}
+
 static gboolean
 is_valid_username (const char *user)
 {
@@ -100,33 +114,33 @@ delete_lightdm_config (void)
 	cmd = g_strdup_printf ("/usr/bin/pkexec %s", GIS_DELETE_LIGHTDM_CONFIG_HELPER);
 
 	if (!g_spawn_command_line_sync (cmd, NULL, NULL, NULL, NULL)) {
-		g_warning ("Couldn't delete /etc/lightdm/lightdm.conf.d/90_gooroom-initial-setup.conf");
+		g_warning ("Couldn't delete 95_gooroom-initial-setup.conf");
 	}
 
 	g_free (cmd);
 }
 
-static void
-remove_after_checking_file_exists (GisSummaryPage *page, const gchar *username)
-{
-	gchar *cmd = NULL;
-	gchar **argv;
-
-	cmd = g_strdup_printf("/home/.ecryptfs/%s", username);
-	if (g_file_test (cmd, G_FILE_TEST_EXISTS)) {
-		cmd = g_strdup_printf ("sudo /usr/bin/rm -rf %s",cmd);
-		g_spawn_command_line_sync (cmd, NULL, NULL, NULL, NULL);
-	}
-
-	cmd = g_strdup_printf("/home/%s", username);
-	if (g_file_test (cmd, G_FILE_TEST_EXISTS)) {
-		cmd = g_strdup_printf ("sudo /usr/bin/rm -rf %s",cmd);
-		g_spawn_command_line_sync (cmd, NULL, NULL, NULL, NULL);
-	}
-
-	g_free(argv);
-	g_free(cmd);
-}
+//static void
+//remove_after_checking_file_exists (GisSummaryPage *page, const gchar *username)
+//{
+//	gchar *cmd = NULL;
+//	gchar **argv;
+//
+//	cmd = g_strdup_printf("/home/.ecryptfs/%s", username);
+//	if (g_file_test (cmd, G_FILE_TEST_EXISTS)) {
+//		cmd = g_strdup_printf ("sudo /usr/bin/rm -rf %s",cmd);
+//		g_spawn_command_line_sync (cmd, NULL, NULL, NULL, NULL);
+//	}
+//
+//	cmd = g_strdup_printf("/home/%s", username);
+//	if (g_file_test (cmd, G_FILE_TEST_EXISTS)) {
+//		cmd = g_strdup_printf ("sudo /usr/bin/rm -rf %s",cmd);
+//		g_spawn_command_line_sync (cmd, NULL, NULL, NULL, NULL);
+//	}
+//
+//	g_free(argv);
+//	g_free(cmd);
+//}
 
 static void
 delete_account (const char *user)
@@ -140,7 +154,7 @@ delete_account (const char *user)
 		}
 	}
 
-	remove_after_checking_file_exists (NULL, user);
+//	remove_after_checking_file_exists (NULL, user);
 
 	g_free (cmd);
 }
@@ -246,20 +260,6 @@ show_error_dialog (GisSummaryPage *page,
 	}
 
 	g_free (username);
-}
-
-static void
-show_splash_window (GisSummaryPage *page)
-{
-	GtkWidget *toplevel;
-	const char *message;
-	GisSummaryPagePrivate *priv = page->priv;
-
-	toplevel = gtk_widget_get_toplevel (GTK_WIDGET (page));
-	message = _("Configuring user's environment\nPlease wait...");
-
-	priv->splash = splash_window_new (GTK_WINDOW (toplevel));
-	splash_window_set_message_label (SPLASH_WINDOW (priv->splash), message);
 }
 
 static char *
@@ -430,11 +430,12 @@ copy_worker_done_cb (GPid pid, gint status, gpointer user_data)
 
 	g_spawn_close_pid (pid);
 
-	/* delete /etc/lightdm/lightdm.conf.d/90_gooroom-initial-setup.conf */
+	/* delete /etc/lightdm/lightdm.conf.d/95_gooroom-initial-setup.conf */
 	delete_lightdm_config ();
 
-	message = _("User's environment configuration is completed.\nRestart the system after a while...");
-	splash_window_set_message_label (SPLASH_WINDOW (self->priv->splash), message);
+	show_splash_window (self,
+                             _("User's environment configuration is completed.\n"
+                               "Restart the system after a while..."));
 
 	g_timeout_add (3000, (GSourceFunc)system_logout_cb, self);
 }
@@ -542,7 +543,7 @@ password_changed_done_cb (PasswdHandler *handler,
 	}
 }
 
-static void
+static gboolean
 add_user_group (GisSummaryPage *page)
 {
 	guint i = 0;
@@ -563,8 +564,12 @@ add_user_group (GisSummaryPage *page)
 		if (!g_spawn_command_line_sync (cmd, NULL, NULL, NULL, NULL)){
 			g_warning ("Faild to register %s with group [ #%d: %s ]\n", username, i, modes[i]);
 		}
+		g_free (cmd);
+
+		gtk_main_iteration ();
 	}
-	g_free (cmd);
+
+	return FALSE;
 }
 
 static void
@@ -583,11 +588,11 @@ adduser_done_cb (GPid pid, gint status, gpointer user_data)
 	if (is_valid_username (username)) {
 		g_usleep (G_USEC_PER_SEC); // waiting for 1 secs
 
+		add_user_group (page);
+
 		passwd_handler = passwd_init ();
 		passwd_change_password (passwd_handler, username, password,
 				(PasswdCallback) password_changed_done_cb, page);
-
-		g_timeout_add (3000, (GSourceFunc)add_user_group, page);
 	} else {
 		const gchar *message, *title;
 
@@ -633,12 +638,11 @@ gis_summary_page_save_data (GisPage *page)
 	GisSummaryPagePrivate *priv = self->priv;
 	GisPageManager *manager = page->manager;
 
-	splash_window_show (priv->splash);
+	show_splash_window (self, _("Configuring user's environment\nPlease wait..."));
 
 	gis_page_manager_get_user_info (manager, &realname, &username, NULL);
 
-
-	cmd_prefix = "/usr/bin/pkexec /usr/sbin/adduser --force-badname --shell /bin/bash --disabled-login --encrypt-home --gecos";
+	cmd_prefix = "/usr/bin/pkexec /usr/sbin/adduser --allow-bad-names --shell /bin/bash --disabled-login --encrypt-home --gecos";
 
 	if (!realname)
 		realname = g_strdup (username);
@@ -651,7 +655,7 @@ gis_summary_page_save_data (GisPage *page)
 		cmd = g_strdup_printf ("%s \"%s\" %s", cmd_prefix, username, username);
 	}
 
-	remove_after_checking_file_exists (self, username);
+//	remove_after_checking_file_exists (self, username);
 	g_shell_parse_argv (cmd, NULL, &argv, NULL);
 
 	if (g_spawn_async (NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD, NULL, NULL, &pid, NULL)) {
@@ -718,13 +722,13 @@ gis_summary_page_init (GisSummaryPage *page)
 
 	priv = page->priv = gis_summary_page_get_instance_private (page);
 
+	priv->splash = NULL;
+
 	g_resources_register (summary_get_resource ());
 
 	gtk_widget_init_template (GTK_WIDGET (page));
 
 	gis_page_set_title (GIS_PAGE (page), _("Setup Complete"));
-
-	show_splash_window (page);
 }
 
 static void

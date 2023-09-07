@@ -110,9 +110,9 @@ main (int argc, char **argv)
 	}
 
 	if (encrypt_home) {
-		cmd_prefix = "/usr/sbin/adduser --force-badname --shell /bin/bash --disabled-login --encrypt-home --gecos";
+		cmd_prefix = "/usr/sbin/adduser --allow-bad-names --shell /bin/bash --disabled-login --encrypt-home --gecos";
 	} else {
-		cmd_prefix = "/usr/sbin/adduser --force-badname --shell /bin/bash --disabled-login --gecos";
+		cmd_prefix = "/usr/sbin/adduser --allow-bad-names --shell /bin/bash --disabled-login --gecos";
 	}
 
 	if (realname) {

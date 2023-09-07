@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gooroom-initial-setup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-16 18:55+0900\n"
+"POT-Creation-Date: 2023-09-07 17:58+0900\n"
 "PO-Revision-Date: 2019-09-04 17:37-0400\n"
 "Last-Translator: Gooroom <gooroom@gooroom.kr>\n"
 "Language-Team: Gooroom <gooroom@gooroom.kr>\n"
@@ -17,24 +17,24 @@ msgstr ""
 
 #: ../src/gis-assistant.c:434 ../src/gis-assistant.ui.h:1
 msgid "Prev"
-msgstr ""
+msgstr "Prev"
 
 #: ../src/gis-assistant.c:435 ../src/gis-assistant.ui.h:2
 msgid "Next"
-msgstr ""
+msgstr "Next"
 
 #: ../src/gis-assistant.c:436 ../src/gis-assistant.ui.h:3
 msgid "Skip"
-msgstr ""
+msgstr "Skip"
 
 #: ../src/gis-assistant.c:437 ../src/gis-assistant.ui.h:4
 msgid "Done"
-msgstr ""
+msgstr "Done"
 
 #: ../src/pages/language/gis-language-page.c:123
 #: ../src/pages/language/gis-language-page.c:149
 msgid "Language Settings"
-msgstr ""
+msgstr "Language Settings"
 
 #: ../src/pages/language/gis-language-page.c:126
 #: ../src/pages/language/gis-language-page.ui.h:1
@@ -42,30 +42,34 @@ msgid ""
 "Set the user's language for Gooroom login. After logging in, you can change "
 "the user's language in the settings."
 msgstr ""
+"Set the user's language for Gooroom login. After logging in, you can change "
+"the user's language in the settings."
 
 #: ../src/pages/account/um-utils.c:140
 msgid "Sorry, that user name isn’t available. Please try another."
-msgstr ""
+msgstr "Sorry, that user name isn’t available. Please try another."
 
 #: ../src/pages/account/um-utils.c:145
 #, c-format
 msgid "The username is too long."
-msgstr ""
+msgstr "The username is too long."
 
 #: ../src/pages/account/um-utils.c:150
 msgid "The username cannot start with a “-”."
-msgstr ""
+msgstr "The username cannot start with a “-”."
 
 #: ../src/pages/account/um-utils.c:163
 msgid ""
 "The username should only consist of upper and lower case letters from a-z, "
 "digits and the following characters: . - _"
 msgstr ""
+"The username should only consist of upper and lower case letters from a-z, "
+"digits and the following characters: . - _"
 
 #: ../src/pages/account/pw-utils.c:81
 msgctxt "Password hint"
 msgid "The new password needs to be different from the old one."
-msgstr ""
+msgstr "The new password needs to be different from the old one."
 
 #: ../src/pages/account/pw-utils.c:83
 msgctxt "Password hint"
@@ -73,6 +77,8 @@ msgid ""
 "This password is very similar to your last one. Try changing some letters "
 "and numbers."
 msgstr ""
+"This password is very similar to your last one. Try changing some letters "
+"and numbers."
 
 #: ../src/pages/account/pw-utils.c:85 ../src/pages/account/pw-utils.c:93
 msgctxt "Password hint"
@@ -80,17 +86,20 @@ msgid ""
 "This password is very similar to your last one. Try changing the password a "
 "bit more."
 msgstr ""
+"This password is very similar to your last one. Try changing the password a "
+"bit more."
 
 #: ../src/pages/account/pw-utils.c:87
 msgctxt "Password hint"
 msgid ""
 "This is a weak password. A password without your user name would be stronger."
 msgstr ""
+"This is a weak password. A password without your user name would be stronger."
 
 #: ../src/pages/account/pw-utils.c:89
 msgctxt "Password hint"
 msgid "This is a weak password. Try to avoid using your name in the password."
-msgstr ""
+msgstr "This is a weak password. Try to avoid using your name in the password."
 
 #: ../src/pages/account/pw-utils.c:91
 msgctxt "Password hint"
@@ -98,31 +107,33 @@ msgid ""
 "This is a weak password. Try to avoid some of the words included in the "
 "password."
 msgstr ""
+"This is a weak password. Try to avoid some of the words included in the "
+"password."
 
 #: ../src/pages/account/pw-utils.c:95
 msgctxt "Password hint"
 msgid "This is a weak password. Try to avoid common words."
-msgstr ""
+msgstr "This is a weak password. Try to avoid common words."
 
 #: ../src/pages/account/pw-utils.c:97
 msgctxt "Password hint"
 msgid "This is a weak password. Try to avoid reordering existing words."
-msgstr ""
+msgstr "This is a weak password. Try to avoid reordering existing words."
 
 #: ../src/pages/account/pw-utils.c:99
 msgctxt "Password hint"
 msgid "This is a weak password. Try to use more numbers."
-msgstr ""
+msgstr "This is a weak password. Try to use more numbers."
 
 #: ../src/pages/account/pw-utils.c:101
 msgctxt "Password hint"
 msgid "This is a weak password. Try to use more uppercase letters."
-msgstr ""
+msgstr "This is a weak password. Try to use more uppercase letters."
 
 #: ../src/pages/account/pw-utils.c:103
 msgctxt "Password hint"
 msgid "This is a weak password. Try to use more lowercase letters."
-msgstr ""
+msgstr "This is a weak password. Try to use more lowercase letters."
 
 #: ../src/pages/account/pw-utils.c:105
 msgctxt "Password hint"
@@ -130,6 +141,8 @@ msgid ""
 "This is a weak password. Try to use more special characters, like "
 "punctuation."
 msgstr ""
+"This is a weak password. Try to use more special characters, like "
+"punctuation."
 
 #: ../src/pages/account/pw-utils.c:107
 msgctxt "Password hint"
@@ -137,11 +150,13 @@ msgid ""
 "This is a weak password. Try to use a mixture of letters, numbers and "
 "punctuation."
 msgstr ""
+"This is a weak password. Try to use a mixture of letters, numbers and "
+"punctuation."
 
 #: ../src/pages/account/pw-utils.c:109
 msgctxt "Password hint"
 msgid "This is a weak password. Try to avoid repeating the same character."
-msgstr ""
+msgstr "This is a weak password. Try to avoid repeating the same character."
 
 #: ../src/pages/account/pw-utils.c:111
 msgctxt "Password hint"
@@ -149,37 +164,41 @@ msgid ""
 "This is a weak password. Try to avoid repeating the same type of character: "
 "you need to mix up letters, numbers and punctuation."
 msgstr ""
+"This is a weak password. Try to avoid repeating the same type of character: "
+"you need to mix up letters, numbers and punctuation."
 
 #: ../src/pages/account/pw-utils.c:113
 msgctxt "Password hint"
 msgid "This is a weak password. Try to avoid sequences like 1234 or abcd."
-msgstr ""
+msgstr "This is a weak password. Try to avoid sequences like 1234 or abcd."
 
 #: ../src/pages/account/pw-utils.c:115
 msgctxt "Password hint"
 msgid ""
 "This is a weak password. Try to add more letters, numbers and punctuation."
 msgstr ""
+"This is a weak password. Try to add more letters, numbers and punctuation."
 
 #: ../src/pages/account/pw-utils.c:117
 msgctxt "Password hint"
 msgid "Mix uppercase and lowercase and try to use a number or two."
-msgstr ""
+msgstr "Mix uppercase and lowercase and try to use a number or two."
 
 #: ../src/pages/account/pw-utils.c:119
 msgctxt "Password hint"
 msgid ""
 "Adding more letters, numbers and punctuation will make the password stronger."
 msgstr ""
+"Adding more letters, numbers and punctuation will make the password stronger."
 
 #: ../src/pages/account/gis-account-page.c:161
 msgid "The passwords do not match."
-msgstr ""
+msgstr "The passwords do not match."
 
 #: ../src/pages/account/gis-account-page.c:321
 #: ../src/pages/account/gis-account-page.c:366
 msgid "Creating Accounts"
-msgstr ""
+msgstr "Creating Accounts"
 
 #: ../src/pages/account/gis-account-page.c:324
 #: ../src/pages/account/gis-account-page.ui.h:1
@@ -187,42 +206,44 @@ msgid ""
 "Enter the user's information for Gooroom login. After logging in, you can "
 "change your information in Settings."
 msgstr ""
+"Enter the user's information for Gooroom login. After logging in, you can "
+"change your information in Settings."
 
 #: ../src/pages/account/gis-account-page.c:327
-#: ../src/pages/summary/gis-summary-page.c:709
+#: ../src/pages/summary/gis-summary-page.c:714
 #: ../src/pages/account/gis-account-page.ui.h:2
 #: ../src/pages/summary/gis-summary-page.ui.h:3
 msgid "User Name"
-msgstr ""
+msgstr "User Name"
 
 #: ../src/pages/account/gis-account-page.c:328
-#: ../src/pages/summary/gis-summary-page.c:710
+#: ../src/pages/summary/gis-summary-page.c:715
 #: ../src/pages/account/gis-account-page.ui.h:3
 #: ../src/pages/summary/gis-summary-page.ui.h:4
 msgid "Real Name"
-msgstr ""
+msgstr "Real Name"
 
 #: ../src/pages/account/gis-account-page.c:329
 #: ../src/pages/account/gis-account-page.ui.h:4
 msgid "Password"
-msgstr ""
+msgstr "Password"
 
 #: ../src/pages/account/gis-account-page.c:330
 #: ../src/pages/account/gis-account-page.ui.h:5
 msgid "Retype Password"
-msgstr ""
+msgstr "Retype Password"
 
 #: ../src/pages/goa/gis-goa-page.c:121
 msgid "Add Account"
-msgstr ""
+msgstr "Add Account"
 
 #: ../src/pages/goa/gis-goa-page.c:275 ../src/pages/goa/gis-goa-page.ui.h:2
 msgid "The system's network is inactive"
-msgstr ""
+msgstr "The system's network is inactive"
 
 #: ../src/pages/goa/gis-goa-page.c:384 ../src/pages/goa/gis-goa-page.c:468
 msgid "Online Accounts Settings"
-msgstr ""
+msgstr "Online Accounts Settings"
 
 #: ../src/pages/goa/gis-goa-page.c:387 ../src/pages/goa/gis-goa-page.ui.h:1
 msgid ""
@@ -230,156 +251,168 @@ msgid ""
 "contacts, documents and photos. Accounts can be added and removed at any "
 "time from the Settings application."
 msgstr ""
+"Connect your accounts to easily access your email, online calendar, "
+"contacts, documents and photos. Accounts can be added and removed at any "
+"time from the Settings application."
 
-#: ../src/pages/summary/gis-summary-page.c:182
+#: ../src/pages/summary/gis-summary-page.c:196
 msgid "Done setting"
-msgstr ""
+msgstr "Done setting"
 
-#: ../src/pages/summary/gis-summary-page.c:183
+#: ../src/pages/summary/gis-summary-page.c:197
 msgid "All settings have been completed. Do you want to reboot?"
-msgstr ""
+msgstr "All settings have been completed. Do you want to reboot?"
 
-#: ../src/pages/summary/gis-summary-page.c:190
-#: ../src/pages/summary/gis-summary-page.c:234
+#: ../src/pages/summary/gis-summary-page.c:204
+#: ../src/pages/summary/gis-summary-page.c:248
 msgid "_Ok"
-msgstr ""
+msgstr "_Ok"
 
-#: ../src/pages/summary/gis-summary-page.c:235
+#: ../src/pages/summary/gis-summary-page.c:249
 msgid "_Cancel"
-msgstr ""
-
-#: ../src/pages/summary/gis-summary-page.c:259
-msgid ""
-"Configuring user's environment\n"
-"Please wait..."
-msgstr ""
+msgstr "_Cancel"
 
 #: ../src/pages/summary/gis-summary-page.c:325
 msgid "No Use"
-msgstr ""
+msgstr "No Use"
 
 #: ../src/pages/summary/gis-summary-page.c:373
 msgid "Unknown"
-msgstr ""
+msgstr "Unknown"
 
-#: ../src/pages/summary/gis-summary-page.c:436
+#: ../src/pages/summary/gis-summary-page.c:437
 msgid ""
 "User's environment configuration is completed.\n"
 "Restart the system after a while..."
 msgstr ""
-
-#: ../src/pages/summary/gis-summary-page.c:486
-msgid "User Environment Configuration Error"
-msgstr ""
+"User's environment configuration is completed.\n"
+"Restart the system after a while..."
 
 #: ../src/pages/summary/gis-summary-page.c:487
+msgid "User Environment Configuration Error"
+msgstr "User Environment Configuration Error"
+
+#: ../src/pages/summary/gis-summary-page.c:488
 msgid ""
 "Failed to configure user's environment. Do you want to try again after "
 "rebooting the system?"
 msgstr ""
-
-#: ../src/pages/summary/gis-summary-page.c:538
-msgid "Password Setting Error"
-msgstr ""
+"Failed to configure user's environment. Do you want to try again after "
+"rebooting the system?"
 
 #: ../src/pages/summary/gis-summary-page.c:539
+msgid "Password Setting Error"
+msgstr "Password Settings Error"
+
+#: ../src/pages/summary/gis-summary-page.c:540
 msgid ""
 "Failed to set password. Do you want to try again after rebooting the system?"
 msgstr ""
+"Failed to set password. Do you want to try again after rebooting the system?"
 
-#: ../src/pages/summary/gis-summary-page.c:594
+#: ../src/pages/summary/gis-summary-page.c:599
 msgid "Account Creating Error"
-msgstr ""
+msgstr "Account Creating Error"
 
-#: ../src/pages/summary/gis-summary-page.c:595
+#: ../src/pages/summary/gis-summary-page.c:600
 msgid ""
 "Failed to create an account. Do you want to try again after rebooting the "
 "system?"
 msgstr ""
+"Failed to create an account. Do you want to try again after rebooting the "
+"system?"
 
-#: ../src/pages/summary/gis-summary-page.c:703
-#: ../src/pages/summary/gis-summary-page.c:725
-msgid "Setup Complete"
+#: ../src/pages/summary/gis-summary-page.c:641
+msgid ""
+"Configuring user's environment\n"
+"Please wait..."
 msgstr ""
-
-#: ../src/pages/summary/gis-summary-page.c:705
-#: ../src/pages/summary/gis-summary-page.ui.h:1
-msgid "Setup is complete"
-msgstr ""
-
-#: ../src/pages/summary/gis-summary-page.c:706
-#: ../src/pages/summary/gis-summary-page.ui.h:2
-msgid "OS"
-msgstr ""
-
-#: ../src/pages/summary/gis-summary-page.c:707
-#: ../src/pages/summary/gis-summary-page.ui.h:6
-msgid "Hostname"
-msgstr ""
+"Configuring user's environment\n"
+"Please wait..."
 
 #: ../src/pages/summary/gis-summary-page.c:708
-#: ../src/pages/summary/gis-summary-page.ui.h:5
-msgid "Language"
-msgstr ""
+#: ../src/pages/summary/gis-summary-page.c:732
+msgid "Setup Complete"
+msgstr "Setup Complete"
+
+#: ../src/pages/summary/gis-summary-page.c:710
+#: ../src/pages/summary/gis-summary-page.ui.h:1
+msgid "Setup is complete"
+msgstr "Setup is complete"
 
 #: ../src/pages/summary/gis-summary-page.c:711
+#: ../src/pages/summary/gis-summary-page.ui.h:2
+msgid "OS"
+msgstr "OS"
+
+#: ../src/pages/summary/gis-summary-page.c:712
+#: ../src/pages/summary/gis-summary-page.ui.h:6
+msgid "Hostname"
+msgstr "Hostname"
+
+#: ../src/pages/summary/gis-summary-page.c:713
+#: ../src/pages/summary/gis-summary-page.ui.h:5
+msgid "Language"
+msgstr "Language"
+
+#: ../src/pages/summary/gis-summary-page.c:716
 #: ../src/pages/summary/gis-summary-page.ui.h:7
 msgid "Online Accounts"
-msgstr ""
+msgstr "Online Accounts"
 
-#: ../src/pages/summary/run-passwd.c:429 ../src/pages/summary/run-su.c:384
+#: ../src/pages/summary/run-passwd.c:429 ../src/pages/summary/run-su.c:396
 msgid "Authentication failed"
-msgstr ""
+msgstr "Authentication failed"
 
 #: ../src/pages/summary/run-passwd.c:509
 #, c-format
 msgid "The new password is too short"
-msgstr ""
+msgstr "The new password is too short"
 
 #: ../src/pages/summary/run-passwd.c:515
 #, c-format
 msgid "The new password is too simple"
-msgstr ""
+msgstr "The new password is too simple"
 
 #: ../src/pages/summary/run-passwd.c:521
 #, c-format
 msgid "The old and new passwords are too similar"
-msgstr ""
+msgstr "The old and new passwords are too similar"
 
 #: ../src/pages/summary/run-passwd.c:524
 #, c-format
 msgid "The new password has already been used recently."
-msgstr ""
+msgstr "The new password has already been used recently."
 
 #: ../src/pages/summary/run-passwd.c:527
 #, c-format
 msgid "The new password must contain numeric or special characters"
-msgstr ""
+msgstr "The new password must contain numeric or special characters"
 
 #: ../src/pages/summary/run-passwd.c:531
 #, c-format
 msgid "The old and new passwords are the same"
-msgstr ""
+msgstr "The old and new passwords are the same"
 
 #: ../src/pages/summary/run-passwd.c:535
 #, c-format
 msgid "Your password has been changed since you initially authenticated!"
-msgstr ""
+msgstr "Your password has been changed since you initially authenticated!"
 
 #: ../src/pages/summary/run-passwd.c:539
 #, c-format
 msgid "The new password does not contain enough different characters"
-msgstr ""
+msgstr "The new password does not contain enough different characters"
 
 #: ../src/pages/summary/run-passwd.c:543
 #, c-format
 msgid "Unknown error"
-msgstr ""
+msgstr "Unknown error"
 
 #: ../src/pages/eulas/gis-eulas-page.c:215
 #: ../src/pages/eulas/gis-eulas-page.c:304
 msgid "License Agreements"
-msgstr ""
+msgstr "License Agreements"
 
 #: ../src/pages/eulas/gis-eulas-page.c:218
 #: ../src/pages/eulas/gis-eulas-page.ui.h:1
@@ -387,79 +420,88 @@ msgid ""
 "I have _agreed to the terms and conditions in this end user license "
 "agreement."
 msgstr ""
+"I have _agreed to the terms and conditions in this end user license "
+"agreement."
 
 #: ../src/pages/network/gis-network-page.c:333
 msgctxt "Wireless access point"
 msgid "Other…"
-msgstr ""
+msgstr "Other…"
 
 #: ../src/pages/network/gis-network-page.c:444
 msgid "Wireless - No Use"
-msgstr ""
+msgstr "Wireless - No Use"
 
 #: ../src/pages/network/gis-network-page.c:450
 msgid "Wireless - Use"
-msgstr ""
+msgstr "Wireless - Use"
 
 #: ../src/pages/network/gis-network-page.c:651
 msgid "Wired - No Use"
-msgstr ""
+msgstr "Wired - No Use"
 
 #: ../src/pages/network/gis-network-page.c:653
 msgid "Wired - Disconnected"
-msgstr ""
+msgstr "Wired - Disconnected"
 
 #: ../src/pages/network/gis-network-page.c:659
 msgid "Wired - Connected"
-msgstr ""
+msgstr "Wired - Connected"
 
 #: ../src/pages/network/gis-network-page.c:709
-#: ../src/pages/network/gis-network-page.c:1148
+#: ../src/pages/network/gis-network-page.c:1119
 msgid "Wired - No Device"
-msgstr ""
+msgstr "Wired - No Device"
 
 #: ../src/pages/network/gis-network-page.c:712
-#: ../src/pages/network/gis-network-page.c:1157
+#: ../src/pages/network/gis-network-page.c:1128
 msgid "Wireless - No Device"
-msgstr ""
+msgstr "Wireless - No Device"
 
-#: ../src/pages/network/gis-network-page.c:1136
-#: ../src/pages/network/gis-network-page.c:1246
+#: ../src/pages/network/gis-network-page.c:1107
+#: ../src/pages/network/gis-network-page.c:1217
 msgid "Network Settings"
-msgstr ""
+msgstr "Network Settings"
 
-#: ../src/pages/network/gis-network-page.c:1139
+#: ../src/pages/network/gis-network-page.c:1110
 #: ../src/pages/network/gis-network-page.ui.h:1
 msgid ""
 "Connect the system to the network. Connect to the network using LAN or WIFI."
 msgstr ""
+"Connect the system to the network. Connect to the network using LAN or WIFI."
 
-#: ../src/pages/network/gis-network-page.c:1161
+#: ../src/pages/network/gis-network-page.c:1132
 #: ../src/pages/network/gis-network-page.ui.h:2
 msgid ""
 "No network device\n"
 "Please contact the administrator."
 msgstr ""
+"No network device\n"
+"Please contact the administrator."
 
-#: ../src/pages/network/gis-network-page.c:1164
+#: ../src/pages/network/gis-network-page.c:1135
 #: ../src/pages/network/gis-network-page.ui.h:4
 msgid ""
 "Network information could not be found.\n"
 "Please contact the administrator."
 msgstr ""
+"Network information could not be found.\n"
+"Please contact the administrator."
 
-#: ../src/pages/network/gis-network-page.c:1167
+#: ../src/pages/network/gis-network-page.c:1138
 #: ../src/pages/network/gis-network-page.ui.h:6
 msgid ""
 "The system's network is inactive.\n"
 "Please click the button below to enable networking."
 msgstr ""
+"The system's network is inactive.\n"
+"Please click the button below to enable networking."
 
-#: ../src/pages/network/gis-network-page.c:1170
+#: ../src/pages/network/gis-network-page.c:1141
 #: ../src/pages/network/gis-network-page.ui.h:8
 msgid "Enable Networking"
-msgstr ""
+msgstr "Enable Networking"
 
 #: ../src/pages/summary/splash-window.ui.h:1
 msgid "Please wait..."
-msgstr ""
+msgstr "Please wait..."

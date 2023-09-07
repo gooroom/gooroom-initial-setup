@@ -65,8 +65,9 @@ struct SuHandler {
 	/* GMainLoop IDs */
 	guint backend_child_watch_id;           /* g_child_watch_add (PID) */
 	guint backend_stdout_watch_id;          /* g_io_add_watch (stdout) */
+	guint su_check_timeout_id;
 
-	/* State of the passwd program */
+	/* State of the su program */
 	SuState backend_state;
 
 	SuCallback auth_cb;
@@ -78,7 +79,7 @@ struct SuHandler {
 
 
 static GQuark
-passwd_error_quark (void)
+su_error_quark (void)
 {
 	static GQuark q = 0;
 
@@ -90,7 +91,7 @@ passwd_error_quark (void)
 }
 
 /* Error handling */
-#define SU_ERROR (passwd_error_quark ())
+#define SU_ERROR (su_error_quark ())
 
 
 static void stop_su (SuHandler *su_handler);
@@ -129,7 +130,7 @@ ignore_sigpipe (gpointer data)
 	signal (SIGPIPE, SIG_IGN);
 }
 
-/* Spawn passwd backend
+/* Spawn su backend
  * Returns: TRUE on success, FALSE otherwise and sets error appropriately */
 static gboolean
 spawn_su (SuHandler *su_handler, GError **error)
@@ -216,14 +217,10 @@ spawn_su (SuHandler *su_handler, GError **error)
 	return TRUE;
 }
 
-/* Stop passwd backend */
+/* Stop su backend */
 static void
 stop_su (SuHandler *su_handler)
 {
-	/* This is the standard way of returning from the dialog with passwd.
-	 * If we return this way we can safely kill passwd as it has completed
-	 * its task.
-	 */
 	if (su_handler->backend_pid != -1) {
 		kill (su_handler->backend_pid, 9);
 	}
@@ -238,7 +235,7 @@ stop_su (SuHandler *su_handler)
 	free_su_resources (su_handler);
 }
 
-/* Clean up passwd resources */
+/* Clean up su resources */
 static void
 free_su_resources (SuHandler *su_handler)
 {
@@ -345,6 +342,18 @@ is_string_complete (gchar *str, ...)
 	return FALSE;
 }
 
+static gboolean
+maybe_su_is_successful_idle_cb (gpointer user_data)
+{
+	SuHandler *su_handler = (SuHandler *)user_data;
+
+	/* Authentication successful */
+	if (su_handler->auth_cb)
+		su_handler->auth_cb (su_handler, NULL, su_handler->auth_cb_data);
+
+	return FALSE;
+}
+
 /*
  * IO watcher for stdout, called whenever there is data to read from the backend.
  * This is where most of the actual IO handling happens.
@@ -378,6 +387,9 @@ io_watch_stdout (GIOChannel *source, GIOCondition condition, SuHandler *su_handl
 	/* In which state is the backend? */
 	switch (su_handler->backend_state) {
 		case SU_STATE_AUTH:
+		{
+			g_source_remove (su_handler->su_check_timeout_id);
+
 			if (strstr (str->str, "Authentication failure") != NULL) {
 				/* Authentication failed */
 				error = g_error_new_literal (SU_ERROR, SU_ERROR_AUTH_FAILED,
@@ -394,8 +406,10 @@ io_watch_stdout (GIOChannel *source, GIOCondition condition, SuHandler *su_handl
 			}
 			reinit = TRUE;
 		break;
+		}
 
 		case SU_STATE_NONE:
+		{
 			/* su is not asking for anything yet */
 			if (is_string_complete (str->str, "assword: ", NULL)) {
 				su_handler->backend_state = SU_STATE_AUTH;
@@ -403,9 +417,12 @@ io_watch_stdout (GIOChannel *source, GIOCondition condition, SuHandler *su_handl
 				/* Pop the IO queue, i.e. send current password */
 				io_queue_pop (su_handler->backend_stdin_queue, su_handler->backend_stdin);
 
+				su_handler->su_check_timeout_id = g_timeout_add (3000, (GSourceFunc)maybe_su_is_successful_idle_cb, su_handler);
+
 				reinit = TRUE;
 			}
 		break;
+		}
 
 		default:
 			/* su has returned an error */

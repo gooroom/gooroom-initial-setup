@@ -166,7 +166,7 @@ main (int argc, char **argv)
 	ensure_nm_applet ();
 	gis_ensure_login_keyring ();
 
-	app = gtk_application_new ("kr.gooroom.initial-setup", G_APPLICATION_FLAGS_NONE);
+	app = gtk_application_new ("kr.gooroom.initial-setup", G_APPLICATION_DEFAULT_FLAGS);
 	g_signal_connect (app, "activate", G_CALLBACK (on_activate), NULL);
 
 	ret = g_application_run (G_APPLICATION (app), argc, argv);

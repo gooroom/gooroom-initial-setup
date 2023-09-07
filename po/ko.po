@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gooroom-initial-setup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-16 18:55+0900\n"
+"POT-Creation-Date: 2023-09-07 17:58+0900\n"
 "PO-Revision-Date: 2019-09-04 17:37-0400\n"
 "Last-Translator: Gooroom <gooroom@gooroom.kr>\n"
 "Language-Team: Gooroom <gooroom@gooroom.kr>\n"
@@ -199,14 +199,14 @@ msgstr ""
 "보를 변경할 수 있습니다."
 
 #: ../src/pages/account/gis-account-page.c:327
-#: ../src/pages/summary/gis-summary-page.c:709
+#: ../src/pages/summary/gis-summary-page.c:714
 #: ../src/pages/account/gis-account-page.ui.h:2
 #: ../src/pages/summary/gis-summary-page.ui.h:3
 msgid "User Name"
 msgstr "아이디"
 
 #: ../src/pages/account/gis-account-page.c:328
-#: ../src/pages/summary/gis-summary-page.c:710
+#: ../src/pages/summary/gis-summary-page.c:715
 #: ../src/pages/account/gis-account-page.ui.h:3
 #: ../src/pages/summary/gis-summary-page.ui.h:4
 msgid "Real Name"
@@ -243,32 +243,24 @@ msgstr ""
 "전자메일 계정, 온라인 달력, 연락처, 문서, 사진에 쉽게 접근할 계정에 연결합니"
 "다.온라인 계정은 로그인 후 설정에서 추가 및 삭제할 수 있습니다."
 
-#: ../src/pages/summary/gis-summary-page.c:182
+#: ../src/pages/summary/gis-summary-page.c:196
 msgid "Done setting"
 msgstr "설정 완료"
 
-#: ../src/pages/summary/gis-summary-page.c:183
+#: ../src/pages/summary/gis-summary-page.c:197
 msgid "All settings have been completed. Do you want to reboot?"
 msgstr ""
 "모든 설정이 완료되었습니다.\n"
-"재시작 하시겠습니까?"
+"시스템을 재시작 하시겠습니까?"
 
-#: ../src/pages/summary/gis-summary-page.c:190
-#: ../src/pages/summary/gis-summary-page.c:234
+#: ../src/pages/summary/gis-summary-page.c:204
+#: ../src/pages/summary/gis-summary-page.c:248
 msgid "_Ok"
 msgstr "예"
 
-#: ../src/pages/summary/gis-summary-page.c:235
+#: ../src/pages/summary/gis-summary-page.c:249
 msgid "_Cancel"
 msgstr "아니오"
-
-#: ../src/pages/summary/gis-summary-page.c:259
-msgid ""
-"Configuring user's environment\n"
-"Please wait..."
-msgstr ""
-"사용자 환경을 구성하고 있습니다.\n"
-"잠시만 기다려 주십시오..."
 
 #: ../src/pages/summary/gis-summary-page.c:325
 msgid "No Use"
@@ -278,7 +270,7 @@ msgstr "사용안함"
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: ../src/pages/summary/gis-summary-page.c:436
+#: ../src/pages/summary/gis-summary-page.c:437
 msgid ""
 "User's environment configuration is completed.\n"
 "Restart the system after a while..."
@@ -286,11 +278,11 @@ msgstr ""
 "사용자 환경 구성을 완료하였습니다.\n"
 "잠시후 시스템을 재시작합니다..."
 
-#: ../src/pages/summary/gis-summary-page.c:486
+#: ../src/pages/summary/gis-summary-page.c:487
 msgid "User Environment Configuration Error"
 msgstr "사용자 환경 구성 오류"
 
-#: ../src/pages/summary/gis-summary-page.c:487
+#: ../src/pages/summary/gis-summary-page.c:488
 msgid ""
 "Failed to configure user's environment. Do you want to try again after "
 "rebooting the system?"
@@ -298,58 +290,66 @@ msgstr ""
 "사용자 환경 구성중 오류가 발생하였습니다. 시스템 재시작 후 다시 시도하시겠습"
 "니까?"
 
-#: ../src/pages/summary/gis-summary-page.c:538
+#: ../src/pages/summary/gis-summary-page.c:539
 msgid "Password Setting Error"
 msgstr "암호 설정 오류"
 
-#: ../src/pages/summary/gis-summary-page.c:539
+#: ../src/pages/summary/gis-summary-page.c:540
 msgid ""
 "Failed to set password. Do you want to try again after rebooting the system?"
 msgstr ""
 "암호 설정중 오류가 발생하였습니다. 시스템 재시작 후 다시 시도하시겠습니까?"
 
-#: ../src/pages/summary/gis-summary-page.c:594
+#: ../src/pages/summary/gis-summary-page.c:599
 msgid "Account Creating Error"
 msgstr "계정 생성 오류"
 
-#: ../src/pages/summary/gis-summary-page.c:595
+#: ../src/pages/summary/gis-summary-page.c:600
 msgid ""
 "Failed to create an account. Do you want to try again after rebooting the "
 "system?"
 msgstr ""
 "계정 생성중 오류가 발생하였습니다. 시스템 재시작 후 다시 시도하시겠습니까?"
 
-#: ../src/pages/summary/gis-summary-page.c:703
-#: ../src/pages/summary/gis-summary-page.c:725
+#: ../src/pages/summary/gis-summary-page.c:641
+msgid ""
+"Configuring user's environment\n"
+"Please wait..."
+msgstr ""
+"사용자 환경을 구성하고 있습니다.\n"
+"잠시만 기다려 주십시오..."
+
+#: ../src/pages/summary/gis-summary-page.c:708
+#: ../src/pages/summary/gis-summary-page.c:732
 msgid "Setup Complete"
 msgstr "설정 완료"
 
-#: ../src/pages/summary/gis-summary-page.c:705
+#: ../src/pages/summary/gis-summary-page.c:710
 #: ../src/pages/summary/gis-summary-page.ui.h:1
 msgid "Setup is complete"
 msgstr "구름OS 로그인 준비를 마쳤습니다."
 
-#: ../src/pages/summary/gis-summary-page.c:706
+#: ../src/pages/summary/gis-summary-page.c:711
 #: ../src/pages/summary/gis-summary-page.ui.h:2
 msgid "OS"
 msgstr "운영체제"
 
-#: ../src/pages/summary/gis-summary-page.c:707
+#: ../src/pages/summary/gis-summary-page.c:712
 #: ../src/pages/summary/gis-summary-page.ui.h:6
 msgid "Hostname"
 msgstr "호스트이름"
 
-#: ../src/pages/summary/gis-summary-page.c:708
+#: ../src/pages/summary/gis-summary-page.c:713
 #: ../src/pages/summary/gis-summary-page.ui.h:5
 msgid "Language"
 msgstr "언어"
 
-#: ../src/pages/summary/gis-summary-page.c:711
+#: ../src/pages/summary/gis-summary-page.c:716
 #: ../src/pages/summary/gis-summary-page.ui.h:7
 msgid "Online Accounts"
 msgstr "온라인 계정"
 
-#: ../src/pages/summary/run-passwd.c:429 ../src/pages/summary/run-su.c:384
+#: ../src/pages/summary/run-passwd.c:429 ../src/pages/summary/run-su.c:396
 msgid "Authentication failed"
 msgstr "인증 실패"
 
@@ -436,21 +436,21 @@ msgid "Wired - Connected"
 msgstr "유선 네트워크 - 연결됨"
 
 #: ../src/pages/network/gis-network-page.c:709
-#: ../src/pages/network/gis-network-page.c:1148
+#: ../src/pages/network/gis-network-page.c:1119
 msgid "Wired - No Device"
 msgstr "유선 네트워크 - 장치 없음"
 
 #: ../src/pages/network/gis-network-page.c:712
-#: ../src/pages/network/gis-network-page.c:1157
+#: ../src/pages/network/gis-network-page.c:1128
 msgid "Wireless - No Device"
 msgstr "무선 네트워크 - 장치 없음"
 
-#: ../src/pages/network/gis-network-page.c:1136
-#: ../src/pages/network/gis-network-page.c:1246
+#: ../src/pages/network/gis-network-page.c:1107
+#: ../src/pages/network/gis-network-page.c:1217
 msgid "Network Settings"
 msgstr "네트워크 설정"
 
-#: ../src/pages/network/gis-network-page.c:1139
+#: ../src/pages/network/gis-network-page.c:1110
 #: ../src/pages/network/gis-network-page.ui.h:1
 msgid ""
 "Connect the system to the network. Connect to the network using LAN or WIFI."
@@ -458,7 +458,7 @@ msgstr ""
 "시스템을 네트워크에 연결합니다. LAN 혹은 WIFI를 이용하여 네트워크에 연결하십"
 "시오."
 
-#: ../src/pages/network/gis-network-page.c:1161
+#: ../src/pages/network/gis-network-page.c:1132
 #: ../src/pages/network/gis-network-page.ui.h:2
 msgid ""
 "No network device\n"
@@ -467,7 +467,7 @@ msgstr ""
 "네트워크 장치를 찾을 수 없습니다.\n"
 "관리자에게 문의하여 주시기 바랍니다."
 
-#: ../src/pages/network/gis-network-page.c:1164
+#: ../src/pages/network/gis-network-page.c:1135
 #: ../src/pages/network/gis-network-page.ui.h:4
 msgid ""
 "Network information could not be found.\n"
@@ -476,7 +476,7 @@ msgstr ""
 "네트워크 정보를 찾을 수 없습니다.\n"
 "관리자에게 문의하여 주시기 바랍니다."
 
-#: ../src/pages/network/gis-network-page.c:1167
+#: ../src/pages/network/gis-network-page.c:1138
 #: ../src/pages/network/gis-network-page.ui.h:6
 msgid ""
 "The system's network is inactive.\n"
@@ -485,7 +485,7 @@ msgstr ""
 "네트워크가 비활성화 상태입니다.\n"
 "아래 버튼을 눌러 네트워크를 활성화 하십시오."
 
-#: ../src/pages/network/gis-network-page.c:1170
+#: ../src/pages/network/gis-network-page.c:1141
 #: ../src/pages/network/gis-network-page.ui.h:8
 msgid "Enable Networking"
 msgstr "네트워크 사용하기"

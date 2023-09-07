@@ -767,35 +767,6 @@ network_enable_button_clicked_cb (GtkButton *button,
 	nm_client_networking_set_enabled (page->priv->nm_client, TRUE, NULL);
 }
 
-/* return value must not be freed! */
-static const gchar *
-get_mac_address_of_device (NMDevice *device)
-{
-	const gchar *mac = NULL;
-
-	switch (nm_device_get_device_type (device)) {
-		case NM_DEVICE_TYPE_WIFI:
-		{
-			NMDeviceWifi *device_wifi = NM_DEVICE_WIFI (device);
-			mac = nm_device_wifi_get_hw_address (device_wifi);
-			break;
-		}
-
-		case NM_DEVICE_TYPE_ETHERNET:
-		{
-			NMDeviceEthernet *device_ethernet = NM_DEVICE_ETHERNET (device);
-			mac = nm_device_ethernet_get_hw_address (device_ethernet);
-			break;
-		}
-
-		default:
-			break;
-	}
-
-	/* no MAC address found */
-	return mac;
-}
-
 /* return value must be freed by caller with g_free() */
 static gchar *
 get_mac_address_of_connection (NMConnection *connection)
@@ -826,10 +797,10 @@ get_mac_address_of_connection (NMConnection *connection)
 static gboolean
 compare_mac_device_with_mac_connection (NMDevice *device, NMConnection *connection)
 {
-	const gchar *mac_dev = NULL;
 	gchar *mac_conn = NULL;
+	const gchar *mac_dev = NULL;
 
-	mac_dev = get_mac_address_of_device (device);
+	mac_dev = nm_device_get_hw_address (device);
 	if (mac_dev != NULL) {
 		mac_conn = get_mac_address_of_connection (connection);
 		if (mac_conn) {
@@ -972,7 +943,7 @@ wired_switch_toggled_cb (GtkSwitch *sw,
 		return FALSE;
 	}
 
-	nm_device_disconnect (priv->nm_device_eth, NULL, NULL);
+	nm_device_disconnect_async (priv->nm_device_eth, NULL, NULL, NULL);
 	gtk_widget_set_sensitive (priv->wired_switch, TRUE);
 	gtk_widget_set_sensitive (priv->wired_details_button, TRUE);
 
