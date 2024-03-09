@@ -1,3 +1,13 @@
+gooroom-initial-setup (4.0.0+grm4u1) unstable; urgency=medium
+
+  [ jongkyung.woo ]
+  * [347b3098] Rebuild on gooroom-4.0
+
+  [ cjheo ]
+  * [9c89ca6d] Rebase to debian 12
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Sat, 09 Mar 2024 17:04:57 +0900
+
 gooroom-initial-setup (0.3.2+grm3u1) unstable; urgency=medium
 
   [ boyeon.choi ]
