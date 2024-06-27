@@ -35,7 +35,7 @@
 #include "pages/goa/gis-goa-page.h"
 #include "pages/summary/gis-summary-page.h"
 
-
+#define LOGONAME "/usr/share/icons/vendor/scalable/emblems/emblem-vendor-white.svg"
 
 struct _GisAssistantPrivate {
 	GtkWidget *stack;
@@ -304,9 +304,7 @@ gis_assistant_ui_setup (GisAssistant *assistant)
 {
 	GdkPixbuf *pixbuf = NULL;
 
-	pixbuf = gdk_pixbuf_new_from_resource_at_scale ("/kr/gooroom/initial-setup/logo",
-                                                    120, 14, FALSE, NULL);
-                                                    //80, 13, FALSE, NULL);
+	pixbuf = gdk_pixbuf_new_from_file_at_scale (LOGONAME, 120, 14, FALSE, NULL);
 	if (pixbuf) {
 		gtk_image_set_from_pixbuf (GTK_IMAGE (assistant->priv->logo_image), pixbuf);
 		g_object_unref (pixbuf);

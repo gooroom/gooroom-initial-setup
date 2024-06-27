@@ -9,7 +9,7 @@
         <file compressed="true" alias="theme.css">../data/theme/theme.css</file>
     </gresource>
 
-	<gresource prefix="/kr/gooroom/initial-setup">
+	<!--gresource prefix="/kr/gooroom/initial-setup">
         <file alias="logo">../data/images/logo.svg</file>
-	</gresource>
+	</gresource-->
 </gresources>
