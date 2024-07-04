@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gooroom-initial-setup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-07 17:58+0900\n"
+"POT-Creation-Date: 2024-07-05 08:15+0900\n"
 "PO-Revision-Date: 2019-09-04 17:37-0400\n"
 "Last-Translator: Gooroom <gooroom@gooroom.kr>\n"
 "Language-Team: Gooroom <gooroom@gooroom.kr>\n"
@@ -15,19 +15,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/gis-assistant.c:434 ../src/gis-assistant.ui.h:1
+#: ../src/gis-assistant.c:433 ../src/gis-assistant.ui.h:1
 msgid "Prev"
 msgstr "이전"
 
-#: ../src/gis-assistant.c:435 ../src/gis-assistant.ui.h:2
+#: ../src/gis-assistant.c:434 ../src/gis-assistant.ui.h:2
 msgid "Next"
 msgstr "다음"
 
-#: ../src/gis-assistant.c:436 ../src/gis-assistant.ui.h:3
+#: ../src/gis-assistant.c:435 ../src/gis-assistant.ui.h:3
 msgid "Skip"
 msgstr "건너뛰기"
 
-#: ../src/gis-assistant.c:437 ../src/gis-assistant.ui.h:4
+#: ../src/gis-assistant.c:436 ../src/gis-assistant.ui.h:4
 msgid "Done"
 msgstr "완료"
 
@@ -199,14 +199,14 @@ msgstr ""
 "보를 변경할 수 있습니다."
 
 #: ../src/pages/account/gis-account-page.c:327
-#: ../src/pages/summary/gis-summary-page.c:714
+#: ../src/pages/summary/gis-summary-page.c:713
 #: ../src/pages/account/gis-account-page.ui.h:2
 #: ../src/pages/summary/gis-summary-page.ui.h:3
 msgid "User Name"
 msgstr "아이디"
 
 #: ../src/pages/account/gis-account-page.c:328
-#: ../src/pages/summary/gis-summary-page.c:715
+#: ../src/pages/summary/gis-summary-page.c:714
 #: ../src/pages/account/gis-account-page.ui.h:3
 #: ../src/pages/summary/gis-summary-page.ui.h:4
 msgid "Real Name"
@@ -319,32 +319,32 @@ msgstr ""
 "사용자 환경을 구성하고 있습니다.\n"
 "잠시만 기다려 주십시오..."
 
-#: ../src/pages/summary/gis-summary-page.c:708
-#: ../src/pages/summary/gis-summary-page.c:732
+#: ../src/pages/summary/gis-summary-page.c:707
+#: ../src/pages/summary/gis-summary-page.c:731
 msgid "Setup Complete"
 msgstr "설정 완료"
 
-#: ../src/pages/summary/gis-summary-page.c:710
+#: ../src/pages/summary/gis-summary-page.c:709
 #: ../src/pages/summary/gis-summary-page.ui.h:1
 msgid "Setup is complete"
 msgstr "구름OS 로그인 준비를 마쳤습니다."
 
-#: ../src/pages/summary/gis-summary-page.c:711
+#: ../src/pages/summary/gis-summary-page.c:710
 #: ../src/pages/summary/gis-summary-page.ui.h:2
 msgid "OS"
 msgstr "운영체제"
 
-#: ../src/pages/summary/gis-summary-page.c:712
+#: ../src/pages/summary/gis-summary-page.c:711
 #: ../src/pages/summary/gis-summary-page.ui.h:6
 msgid "Hostname"
 msgstr "호스트이름"
 
-#: ../src/pages/summary/gis-summary-page.c:713
+#: ../src/pages/summary/gis-summary-page.c:712
 #: ../src/pages/summary/gis-summary-page.ui.h:5
 msgid "Language"
 msgstr "언어"
 
-#: ../src/pages/summary/gis-summary-page.c:716
+#: ../src/pages/summary/gis-summary-page.c:715
 #: ../src/pages/summary/gis-summary-page.ui.h:7
 msgid "Online Accounts"
 msgstr "온라인 계정"
@@ -404,7 +404,6 @@ msgid "License Agreements"
 msgstr "사용자 동의"
 
 #: ../src/pages/eulas/gis-eulas-page.c:218
-#: ../src/pages/eulas/gis-eulas-page.ui.h:1
 msgid ""
 "I have _agreed to the terms and conditions in this end user license "
 "agreement."
@@ -489,6 +488,10 @@ msgstr ""
 #: ../src/pages/network/gis-network-page.ui.h:8
 msgid "Enable Networking"
 msgstr "네트워크 사용하기"
+
+#: ../src/pages/eulas/gis-eulas-page.ui.h:1
+msgid "I agree to the End-user license agreement"
+msgstr "최종 사용자 라이선스 계약의 약관에 동의했습니다."
 
 #: ../src/pages/summary/splash-window.ui.h:1
 msgid "Please wait..."

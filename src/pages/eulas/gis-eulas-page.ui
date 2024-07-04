@@ -40,7 +40,7 @@
           <object class="GtkLabel" id="agreement_label">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">I have _agreed to the terms and conditions in this end user license agreement.</property>
+            <property name="label" translatable="yes">I agree to the End-user license agreement</property>
             <property name="wrap">True</property>
             <property name="wrap_mode">word</property>
             <property name="ellipsize">end</property>
