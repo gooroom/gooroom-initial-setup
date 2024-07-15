@@ -14,7 +14,7 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="valign">start</property>
-            <property name="label" translatable="yes">Set the user's language for Gooroom login. After logging in, you can change the user's language in the settings.</property>
+            <property name="label" translatable="yes">Set the user's language for login. After logging in, you can change the user's language in the settings.</property>
             <property name="wrap">True</property>
             <property name="wrap_mode">word</property>
             <property name="ellipsize">end</property>

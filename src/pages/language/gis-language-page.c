@@ -123,7 +123,7 @@ gis_language_page_locale_changed (GisPage *page)
 	gis_page_set_title (GIS_PAGE (page), _("Language Settings"));
 
 	gtk_label_set_text (GTK_LABEL (self->priv->subtitle_label),
-                        _("Set the user's language for Gooroom login. "
+                        _("Set the user's language for login. "
                           "After logging in, you can change the user's language in the settings."));
 }
 

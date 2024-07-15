@@ -321,7 +321,7 @@ gis_account_page_locale_changed (GisPage *page)
 	gis_page_set_title (GIS_PAGE (page), _("Creating Accounts"));
 
 	gtk_label_set_text (GTK_LABEL (priv->subtitle_label),
-                        _("Enter the user's information for Gooroom login. After logging in, "
+                        _("Enter the user's information for login. After logging in, "
                           "you can change your information in Settings."));
 
 	gtk_label_set_text (GTK_LABEL (priv->username_label), _("User Name"));

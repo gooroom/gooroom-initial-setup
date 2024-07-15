@@ -387,8 +387,8 @@ update_distro_info (GisSummaryPage *page)
 
 	name = NULL;
 
-	if (g_file_get_contents ("/etc/os-release", &buffer, NULL, NULL)) {
-		name = get_item (buffer, "NAME");
+	if (g_file_get_contents ("/etc/gooroom/info", &buffer, NULL, NULL)) {
+		name = get_item (buffer, "DESCRIPTION");
 		g_free (buffer);
 	}
 

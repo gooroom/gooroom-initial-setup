@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gooroom-initial-setup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-07 17:58+0900\n"
+"POT-Creation-Date: 2024-07-15 10:25+0900\n"
 "PO-Revision-Date: 2019-09-04 17:37-0400\n"
 "Last-Translator: Gooroom <gooroom@gooroom.kr>\n"
 "Language-Team: Gooroom <gooroom@gooroom.kr>\n"
@@ -15,19 +15,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/gis-assistant.c:434 ../src/gis-assistant.ui.h:1
+#: ../src/gis-assistant.c:433 ../src/gis-assistant.ui.h:1
 msgid "Prev"
 msgstr "Prev"
 
-#: ../src/gis-assistant.c:435 ../src/gis-assistant.ui.h:2
+#: ../src/gis-assistant.c:434 ../src/gis-assistant.ui.h:2
 msgid "Next"
 msgstr "Next"
 
-#: ../src/gis-assistant.c:436 ../src/gis-assistant.ui.h:3
+#: ../src/gis-assistant.c:435 ../src/gis-assistant.ui.h:3
 msgid "Skip"
 msgstr "Skip"
 
-#: ../src/gis-assistant.c:437 ../src/gis-assistant.ui.h:4
+#: ../src/gis-assistant.c:436 ../src/gis-assistant.ui.h:4
 msgid "Done"
 msgstr "Done"
 
@@ -39,10 +39,10 @@ msgstr "Language Settings"
 #: ../src/pages/language/gis-language-page.c:126
 #: ../src/pages/language/gis-language-page.ui.h:1
 msgid ""
-"Set the user's language for Gooroom login. After logging in, you can change "
-"the user's language in the settings."
+"Set the user's language for login. After logging in, you can change the "
+"user's language in the settings."
 msgstr ""
-"Set the user's language for Gooroom login. After logging in, you can change "
+"Set the user's language for login. After logging in, you can change "
 "the user's language in the settings."
 
 #: ../src/pages/account/um-utils.c:140
@@ -203,21 +203,21 @@ msgstr "Creating Accounts"
 #: ../src/pages/account/gis-account-page.c:324
 #: ../src/pages/account/gis-account-page.ui.h:1
 msgid ""
-"Enter the user's information for Gooroom login. After logging in, you can "
-"change your information in Settings."
+"Enter the user's information for login. After logging in, you can change "
+"your information in Settings."
 msgstr ""
-"Enter the user's information for Gooroom login. After logging in, you can "
+"Enter the user's information for login. After logging in, you can "
 "change your information in Settings."
 
 #: ../src/pages/account/gis-account-page.c:327
-#: ../src/pages/summary/gis-summary-page.c:714
+#: ../src/pages/summary/gis-summary-page.c:713
 #: ../src/pages/account/gis-account-page.ui.h:2
 #: ../src/pages/summary/gis-summary-page.ui.h:3
 msgid "User Name"
 msgstr "User Name"
 
 #: ../src/pages/account/gis-account-page.c:328
-#: ../src/pages/summary/gis-summary-page.c:715
+#: ../src/pages/summary/gis-summary-page.c:714
 #: ../src/pages/account/gis-account-page.ui.h:3
 #: ../src/pages/summary/gis-summary-page.ui.h:4
 msgid "Real Name"
@@ -330,32 +330,32 @@ msgstr ""
 "Configuring user's environment\n"
 "Please wait..."
 
-#: ../src/pages/summary/gis-summary-page.c:708
-#: ../src/pages/summary/gis-summary-page.c:732
+#: ../src/pages/summary/gis-summary-page.c:707
+#: ../src/pages/summary/gis-summary-page.c:731
 msgid "Setup Complete"
 msgstr "Setup Complete"
 
-#: ../src/pages/summary/gis-summary-page.c:710
+#: ../src/pages/summary/gis-summary-page.c:709
 #: ../src/pages/summary/gis-summary-page.ui.h:1
 msgid "Setup is complete"
 msgstr "Setup is complete"
 
-#: ../src/pages/summary/gis-summary-page.c:711
+#: ../src/pages/summary/gis-summary-page.c:710
 #: ../src/pages/summary/gis-summary-page.ui.h:2
 msgid "OS"
 msgstr "OS"
 
-#: ../src/pages/summary/gis-summary-page.c:712
+#: ../src/pages/summary/gis-summary-page.c:711
 #: ../src/pages/summary/gis-summary-page.ui.h:6
 msgid "Hostname"
 msgstr "Hostname"
 
-#: ../src/pages/summary/gis-summary-page.c:713
+#: ../src/pages/summary/gis-summary-page.c:712
 #: ../src/pages/summary/gis-summary-page.ui.h:5
 msgid "Language"
 msgstr "Language"
 
-#: ../src/pages/summary/gis-summary-page.c:716
+#: ../src/pages/summary/gis-summary-page.c:715
 #: ../src/pages/summary/gis-summary-page.ui.h:7
 msgid "Online Accounts"
 msgstr "Online Accounts"
@@ -415,7 +415,6 @@ msgid "License Agreements"
 msgstr "License Agreements"
 
 #: ../src/pages/eulas/gis-eulas-page.c:218
-#: ../src/pages/eulas/gis-eulas-page.ui.h:1
 msgid ""
 "I have _agreed to the terms and conditions in this end user license "
 "agreement."
@@ -501,6 +500,10 @@ msgstr ""
 #: ../src/pages/network/gis-network-page.ui.h:8
 msgid "Enable Networking"
 msgstr "Enable Networking"
+
+#: ../src/pages/eulas/gis-eulas-page.ui.h:1
+msgid "I agree to the End-user license agreement"
+msgstr "I agree to the End-user license agreement"
 
 #: ../src/pages/summary/splash-window.ui.h:1
 msgid "Please wait..."

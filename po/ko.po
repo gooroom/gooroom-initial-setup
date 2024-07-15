@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gooroom-initial-setup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-05 08:15+0900\n"
+"POT-Creation-Date: 2024-07-15 10:25+0900\n"
 "PO-Revision-Date: 2019-09-04 17:37-0400\n"
 "Last-Translator: Gooroom <gooroom@gooroom.kr>\n"
 "Language-Team: Gooroom <gooroom@gooroom.kr>\n"
@@ -39,10 +39,10 @@ msgstr "언어 설정"
 #: ../src/pages/language/gis-language-page.c:126
 #: ../src/pages/language/gis-language-page.ui.h:1
 msgid ""
-"Set the user's language for Gooroom login. After logging in, you can change "
-"the user's language in the settings."
+"Set the user's language for login. After logging in, you can change the "
+"user's language in the settings."
 msgstr ""
-"구름 로그인을 위한 사용자의 언어를 설정합니다. 로그인 후 설정에서 사용자의 언"
+"로그인을 위한 사용자의 언어를 설정합니다. 로그인 후 설정에서 사용자의 언"
 "어를 변경할 수 있습니다."
 
 #: ../src/pages/account/um-utils.c:140
@@ -192,10 +192,10 @@ msgstr "로그인 계정 생성"
 #: ../src/pages/account/gis-account-page.c:324
 #: ../src/pages/account/gis-account-page.ui.h:1
 msgid ""
-"Enter the user's information for Gooroom login. After logging in, you can "
-"change your information in Settings."
+"Enter the user's information for login. After logging in, you can change "
+"your information in Settings."
 msgstr ""
-"구름 로그인을 위한 사용자의 정보를 입력합니다. 로그인 후 설정에서 사용자의 정"
+"로그인을 위한 사용자의 정보를 입력합니다. 로그인 후 설정에서 사용자의 정"
 "보를 변경할 수 있습니다."
 
 #: ../src/pages/account/gis-account-page.c:327
