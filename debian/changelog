@@ -1,3 +1,12 @@
+gooroom-initial-setup (4.1.0+grm4u1) unstable; urgency=medium
+
+  [ boyeon.choi ]
+  * [47f01d2c] Change the logo location
+  * [45619e75] Reduce phrases to fit UI
+  * [a3a7fcde] Change the account page to be more broad
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Fri, 30 Aug 2024 15:47:00 +0900
+
 gooroom-initial-setup (4.0.0+grm4u1) unstable; urgency=medium
 
   [ jongkyung.woo ]
